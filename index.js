@@ -41,7 +41,7 @@ app.use(function(req,res,next){
 // 생각못함...
 
 app.use('/', require('./routes/home'));
-app.use('/posts', require('./routes/posts'));
+app.use('/posts',util.getPostQueryString, require('./routes/posts'));
 app.use('/users', require('./routes/users'));
 
 
