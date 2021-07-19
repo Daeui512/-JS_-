@@ -42,7 +42,8 @@ util.getPostQueryString = function (req, res, next) {
         var page = overwrites.page?overwrites.page:(req.query.page?req.query.page:'');
         var limit = overwrites.limit?overwrites.limit:(req.query.limit?req.query.limit:'');
         var searchType = overwrites.searchType?overwrites.searchType:(req.query.searchType?req.query.searchType:'');
-        var searchText = overwrites.searchText?overwrites.searchText:(req.query.searchText?req.query.searchType:'');
+        var searchText = overwrites.searchText?overwrites.searchText:(req.query.searchText?req.query.searchText:'');
+        
         if (page) {
             queryArray.push('page=' + page);
         }

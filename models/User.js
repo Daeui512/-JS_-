@@ -106,9 +106,3 @@ userSchema.methods.authenticate = function (password) {
 // model & export
 var User = mongoose.model('user',userSchema);
 module.exports = User;
-
-
-// virtuals 를 사용하는 이유
-// 비밀번호값은 보안 값이기 때문에 읽어오는 행위를 false로 해놓았다
-// 그렇기 때문에 비밀번호를 불러올수 있는 가상의 Object를 생성해서 
-// 비밀번호를 서버에서 조회할 수 있도록 하는 것이다.
